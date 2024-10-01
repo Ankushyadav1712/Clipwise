@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+            rel="stylesheet" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap"
+            rel="stylesheet" />
+        <link rel="stylesheet" href="Style.css">
+    </head>
+    <body>
+        <div class="bgimg">
+            <div class="container">
+                <div class="logo">
+                    <img alt="Pop Rock Crystal Logo" height="40"
+                        src="https://s3-alpha-sig.figma.com/img/515a/3922/05949d981f0a7ab0ecb2d55fcf22b90f?Expires=1728864000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=QM9aP6psi0S5kPMyarBxUgypM-4PRGRQ3z79i2eR0hUPgbfxn1BxFh2tLIF1nDoCSvbjJ4S8Ggw6DYfAGu06y7qLeb7I6PJiCHYZCu~1HlIhpQbLR7Z62YYpLbD~unVbQ~YG5DrPRy-7wQjf~F9vMWHxS-b4q7aQPHk0tvXA1Ey-rlktGBYt1wtqYU9fCcseSgVZwmtxvCP38ByPxx0vML7cbE2Thb8ekdsO0h6u4QwTIpVVh76kUorAqKEqWNQOKIUNvc-mcSz6TifJCtsdEmaX6yORqF2kdMAx6vGJeZFWnML4QHIeaW-OHEHlwNwQg2~gjivTDQLuOKS~sb-Y1w__"
+                        width="40" />
+                    <span
+                        style="color: #fff; font-size: 24px; font-weight: 700;">
+                        Pop Rock Crystal
+                    </span>
+                </div>
+                <div class="nav">
+                    <a href="#">
+                        Home
+                    </a>
+                    <a href="#">
+                        Shop
+                    </a>
+                    <a href="#">
+                        About Us
+                    </a>
+                    <a href="#">
+                        Help
+                    </a>
+                </div>
+                <div>
+                    <i class="fas fa-shopping-cart" style="color: #fff;">
+                    </i>
+                </div>
+            </div>
+
+            <div class="main-content">
+                <div class="left-content">
+                    <h1>
+                        Welcome to
+                        <br />
+                        Pop Rock Crystal Shop!
+                    </h1>
+                    <p>
+                        Here you will find unique phone accessories, crystals,
+                        jewelry and more. Free shipping inside the U.S. and our
+                        phone grips come with a lifetime warranty. Enjoy!
+                    </p>
+                    <div class="buttons">
+                        <a class="shop-now" href="#">
+                            SHOP NOW
+                        </a>
+                        <a class="about-us" href="#">
+                            about us
+                        </a>
+                    </div>
+                </div>
+
+                <div class="right-content">
+                    <div class="new-lot">New lot</div>
+                    <img id="mainImage" alt="Crystal Agate Phone Grip"
+                        height="400"
+                        src="https://s3-alpha-sig.figma.com/img/515a/3922/05949d981f0a7ab0ecb2d55fcf22b90f?Expires=1728864000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=QM9aP6psi0S5kPMyarBxUgypM-4PRGRQ3z79i2eR0hUPgbfxn1BxFh2tLIF1nDoCSvbjJ4S8Ggw6DYfAGu06y7qLeb7I6PJiCHYZCu~1HlIhpQbLR7Z62YYpLbD~unVbQ~YG5DrPRy-7wQjf~F9vMWHxS-b4q7aQPHk0tvXA1Ey-rlktGBYt1wtqYU9fCcseSgVZwmtxvCP38ByPxx0vML7cbE2Thb8ekdsO0h6u4QwTIpVVh76kUorAqKEqWNQOKIUNvc-mcSz6TifJCtsdEmaX6yORqF2kdMAx6vGJeZFWnML4QHIeaW-OHEHlwNwQg2~gjivTDQLuOKS~sb-Y1w__"
+                        width="300" />
+                    <div class="description">
+                        CRYSTAL AGATE PHONE GRIP -
+                        <span>18.99$</span>
+                    </div>
+                    <div class="carousel">
+                        <div class="arrow" id="prevArrow">
+                            <i class="fas fa-arrow-left"></i>
+                        </div>
+                        <div class="dots" id="dotsContainer">
+                            <!-- Dots will be dynamically generated here -->
+                        </div>
+                        <div class="arrow" id="nextArrow">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- <button class="scroll-down" onclick>
+                <i class="fas fa-mouse">
+                </i>
+                <p>
+                    scroll down
+                </p>
+            </button> -->
+        </div>
+
+        <!-- all produncts -->
+
+        <div class="container1">
+            <div class="header">
+                <h1>
+                    All product
+                </h1>
+            </div>
+            <div class="filter-sort">
+                <span>
+                    Filter:
+                </span>
+                <select id="filter">
+                    <option>
+                        All Products
+                    </option>
+                </select>
+                <span>
+                    Sort:
+                </span>
+                <select id="sort" onchange="sortProducts()">
+                    <option value="best-selling">
+                        Best Selling
+                    </option>
+                    <option value="price-low-high">
+                        Price: Low to High
+                    </option>
+                    <option value="price-high-low">
+                        Price: High to Low
+                    </option>
+                </select>
+            </div>
+            <div class="products" id="product-list"></div>
+
+            <!-- <div class="view-all">
+                <button onclick="viewAllProducts()">
+                    View All
+                </button>
+            </div> -->
+
+            <div class="view-all" id="view-all-container">
+                <button onclick="viewAllProducts()">View All</button>
+            </div>
+
+        </div>
+
+
+        <!--  -->
+
+
+        <div class="container-last">
+            <div class="product-info">
+                <span class="label">BEST PRICE</span>
+                <h1>Agate Phone Grip</h1>
+                <div class="price">
+                    <span class="original-price">$44.50</span>
+                    <span class="discounted-price">$19.50</span>
+                </div>
+                <p>These Pop Rock Crystal grip tops can be swapped with other tops depending on your mood, outfit, nails, phone case, holiday, etc.! Just gently squeeze the sides to remove and swap out with another color or design!</p>
+                <button class="buy-now">BUY NOW</button>
+            </div>
+            <div class="outer-circle">
+                <div class="product-image">
+                    <img src="https://s3-alpha-sig.figma.com/img/515a/3922/05949d981f0a7ab0ecb2d55fcf22b90f?Expires=1728864000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=QM9aP6psi0S5kPMyarBxUgypM-4PRGRQ3z79i2eR0hUPgbfxn1BxFh2tLIF1nDoCSvbjJ4S8Ggw6DYfAGu06y7qLeb7I6PJiCHYZCu~1HlIhpQbLR7Z62YYpLbD~unVbQ~YG5DrPRy-7wQjf~F9vMWHxS-b4q7aQPHk0tvXA1Ey-rlktGBYt1wtqYU9fCcseSgVZwmtxvCP38ByPxx0vML7cbE2Thb8ekdsO0h6u4QwTIpVVh76kUorAqKEqWNQOKIUNvc-mcSz6TifJCtsdEmaX6yORqF2kdMAx6vGJeZFWnML4QHIeaW-OHEHlwNwQg2~gjivTDQLuOKS~sb-Y1w__" alt="Agate Phone Grip">
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer">
+            
+        </div>
+
+        <script src="Script.js"></script>
+    </body>
+
+</html>
